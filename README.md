@@ -110,6 +110,7 @@ RWKV.enable_state_tunig(self,
 ```
 rwkv原作者的文章里只对了time-mix层的wkv算子做了state-tuning。但其实rwkv接受来自上一时间的信息不只是wkv算子，还有两个time-shift层也可以接受上一时间的信息。都可以看作来自上一时间的state。  
 因此我提供了time_shitf_tuning参数，如果设置为true则可以把time-shift也开启state-tuning。   
+需要注意的是，state tuning只能在纯py算子的情况下才能训练，推理的话就无所谓了。如果训练的话建议用jax后端，torch后端慢到不可接受。
 ## 如何开启模型推理
  
 简单来说首先我们和之前一样定义RWKV，当然我们还可以加入几个参数。
@@ -253,4 +254,4 @@ generate(test_text)
 ``` 
 这部分完整代码参考[rwkv state推理代码](https://github.com/pass-lin/RWKV6-Keras/blob/main/rwkv_state_generate_test.py) 
 
-如果你想要知道模型的全部参数及其含义，你可以阅读[bert4keras3文档]([https://github.com/pass-lin/bert4keras3/blob/main/document.md#bert4keras3layerslayernormsgroupnorm](https://github.com/pass-lin/bert4keras3/blob/main/document.md))
+如果你想要知道模型的全部参数及其含义，你可以阅读[bert4keras3文档](https://github.com/pass-lin/bert4keras3/blob/main/document.md)
