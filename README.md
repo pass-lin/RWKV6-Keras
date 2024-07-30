@@ -253,4 +253,4 @@ generate(test_text)
 ``` 
 这部分完整代码参考[rwkv state推理代码](https://github.com/pass-lin/RWKV6-Keras/blob/main/rwkv_state_generate_test.py) 
 
-如果你想要知道模型的全部参数及其含义，你可以阅读[bert4keras3文档](https://github.com/pass-lin/bert4keras3/blob/main/document.md#bert4keras3layerslayernormsgroupnorm)
+如果你想要知道模型的全部参数及其含义，你可以阅读[bert4keras3文档]([https://github.com/pass-lin/bert4keras3/blob/main/document.md#bert4keras3layerslayernormsgroupnorm](https://github.com/pass-lin/bert4keras3/blob/main/document.md))
